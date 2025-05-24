@@ -5,22 +5,23 @@ interface FirstViewProps {
 }
 
 export default function AnimatedBox({scrollYProgress}: FirstViewProps) {
-    const section1Opacity = useTransform(scrollYProgress, [0, 0.25, 0.33], [1, 1, 0])
-    const section2Opacity = useTransform(scrollYProgress, [0.25, 0.33, 0.67, 0.75], [0, 1, 1, 0])
+    const section1Opacity = useTransform(scrollYProgress, [0, 0.25, 0.33], [1, 1, 0]);
+    const section2Opacity = useTransform(scrollYProgress, [0.25, 0.33, 0.67, 0.75], [0, 1, 1, 0]);
 
-    const boxScale = useTransform(scrollYProgress, [0, 0.33, 0.67, 1], [1, 0.8, 0.8, 0.8])
+    const boxScale = useTransform(scrollYProgress, [0, 0.33, 0.67, 1], [1, 0.8, 0.8, 0.8]);
 
     const boxColor = useTransform(
         scrollYProgress,
         [0, 0.25, 0.33, 0.67, 0.75, 1],
         ["#FFFFFF", "#FFFFFF", "#0061FF", "#0061FF", "#FFFFFF", "#FFFFFF"],
-    )
+    );
 
     const textColor = useTransform(
         scrollYProgress,
         [0, 0.25, 0.33, 0.67, 0.75, 1],
         ["#0061FF", "#0061FF", "#FFFFFF", "#FFFFFF", "#0061FF", "#0061FF"],
-    )
+    );
+
     return (
         <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center z-10">
             <motion.div

@@ -16,8 +16,8 @@ export default function Page() {
     const section3Opacity = useTransform(scrollYProgress, [0.67, 0.75, 1], [0, 1, 1]);
 
     useEffect(() => {
-        const unsubscribe = scrollYProgress.on("change", setScrollProgress)
-        return () => unsubscribe()
+        const unsubscribe = scrollYProgress.on("change", setScrollProgress);
+        return () => unsubscribe();
     }, [scrollYProgress]);
 
     return (

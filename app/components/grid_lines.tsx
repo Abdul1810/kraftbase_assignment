@@ -4,8 +4,8 @@ export default function GridLines({scrollYProgress}: { scrollYProgress: MotionVa
     const gridColumns = 16;
     const gridRows = 12;
 
-    const gridLinesScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0.5])
-    const gridLinesOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.2, 0.15, 0.05])
+    const gridLinesScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0.5]);
+    const gridLinesOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.2, 0.15, 0.05]);
 
     return (
         <motion.div
