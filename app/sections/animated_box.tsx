@@ -24,7 +24,7 @@ export default function AnimatedBox({scrollYProgress}: FirstViewProps) {
     return (
         <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center z-10">
             <motion.div
-                className="w-[80vh] h-[80vh] max-w-[90vw] max-h-[90vw] flex flex-col justify-between p-8 pointer-events-auto border-2 border-blue-500/30"
+                className="w-[80vh] h-[80vh] max-w-[90vw] max-h-[90vw] flex flex-col justify-between p-8 border-2 border-blue-500/30"
                 style={{
                     backgroundColor: boxColor,
                     scale: boxScale,
