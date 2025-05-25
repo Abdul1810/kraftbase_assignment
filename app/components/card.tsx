@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import {motion, MotionValue} from "framer-motion"
+import {motion} from "framer-motion"
 
 interface CardProps {
     className?: string
@@ -12,7 +12,9 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({className = "", children, scrollProgress}) => {
     return (
         <motion.div
-            className={`card-hover-animation ${className}`}
+            className={`card-hover-animation ${className} ${
+                scrollProgress > 0.75 ? 'cursor-pointer pointer-events-auto' : 'pointer-events-none'
+            }`}
             initial={{opacity: 0, y: 20, scale: 1.1}}
             animate={{
                 opacity: scrollProgress > 0.75 ? 1 : 0,
