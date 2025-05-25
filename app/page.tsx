@@ -50,8 +50,8 @@ export default function Page() {
                         >
                             <h3 className="text-sm md:text-xl font-bold">Voice & Tone</h3>
                             <div className="flex items-center justify-center flex-1">
-                                <div className="text-4xl md:text-6xl font-bold">"</div>
-                                <div className="text-4xl md:text-6xl font-bold ml-4 md:ml-8">"</div>
+                                <div className="text-4xl md:text-6xl font-bold">❝</div>
+                                <div className="text-4xl md:text-6xl font-bold ml-4 md:ml-8">❞</div>
                             </div>
                         </Card>
 
