@@ -54,11 +54,11 @@ export default function AnimatedBox({ scrollYProgress }: FirstViewProps) {
                     >
                         At Kraftbase, our Brand
                         <br />
-                        Guidelines help us
+                        helps clients to
                         <br />
-                        infuse everything we
+                        craft their digital
                         <br />
-                        make with identity.
+                        experience exceptionally.
                     </motion.h1>
 
                     {/* 🔄 Logo animates from center to bottom-left on load */}
@@ -84,15 +84,15 @@ export default function AnimatedBox({ scrollYProgress }: FirstViewProps) {
                         className="text-xl md:text-3xl font-bold leading-tight text-left"
                         style={{ color: textColor }}
                     >
-                        From icons to illustration,
+                        From design to development,
                         <br />
-                        logos to language, this
+                        SEO to marketing, this
                         <br />
                         collection is the foundation
                         <br />
-                        for how Kraftbase looks, feels,
+                        for how Kraftbase works,
                         <br />
-                        and sounds like Kraftbase.
+                        and sounds like Real Kraft.
                     </motion.h1>
 
                     <motion.div>
