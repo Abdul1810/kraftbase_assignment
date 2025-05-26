@@ -1,9 +1,9 @@
 "use client"
 import {useRef, useEffect, useState} from "react"
 import {motion, useScroll, useTransform} from "framer-motion"
-import {Card} from "./components/card"
-import GridLines from "@/app/components/grid_lines";
-import AnimatedBox from "@/app/sections/animated_box";
+import {Card} from "@/src/components/card"
+import GridLines from "@/src/components/grid_lines";
+import AnimatedBox from "@/src/sections/animated_box";
 
 export default function Page() {
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -109,7 +109,6 @@ export default function Page() {
                             </div>
                         </Card>
 
-                        {/* Color */}
                         <Card
                             className="bg-orange-400 p-4 md:p-6 flex flex-col justify-between text-orange-900"
                             scrollProgress={scrollProgress}

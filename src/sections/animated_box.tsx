@@ -1,4 +1,4 @@
-import { motion, MotionValue, useTransform, useAnimation } from "framer-motion";
+import { motion, MotionValue, useAnimation, useTransform } from "framer-motion";
 import { useEffect } from "react";
 
 interface FirstViewProps {
@@ -23,7 +23,6 @@ export default function AnimatedBox({ scrollYProgress }: FirstViewProps) {
         ["#0061FF", "#0061FF", "#FFFFFF", "#FFFFFF", "#0061FF", "#0061FF"],
     );
 
-    // 🔥 Logo animation controller
     const logoControls = useAnimation();
 
     useEffect(() => {
@@ -50,6 +49,9 @@ export default function AnimatedBox({ scrollYProgress }: FirstViewProps) {
                 <motion.div className="flex flex-col justify-between h-full" style={{ opacity: section1Opacity }}>
                     <motion.h1
                         className="text-2xl md:text-4xl font-bold leading-tight text-left"
+                        initial={{ opacity: 0, y: "-10%" }}
+                        animate={{ opacity: 1, y: "0%" }}
+                        transition={{ duration: 1, ease: "easeOut" }}
                         style={{ color: textColor }}
                     >
                         At Kraftbase, our Brand
@@ -61,14 +63,13 @@ export default function AnimatedBox({ scrollYProgress }: FirstViewProps) {
                         experience exceptionally.
                     </motion.h1>
 
-                    {/* 🔄 Logo animates from center to bottom-left on load */}
                     <motion.div
-                        className="relative w-24 h-24"
-                        initial={{ x: "300%", y: "-250%" }}
+                        className="relative w-16 h-16 md:w-24 md:h-24"
+                        initial={{ x: "250%", y: "-250%" }}
                         animate={logoControls}
                     >
                         <motion.img
-                            className="w-24 h-24"
+                            className="w-16 h-16 md:w-24 md:h-24"
                             src="/logo.png"
                             alt="Kraftbase Logo"
                             style={{ color: textColor }}
@@ -96,7 +97,7 @@ export default function AnimatedBox({ scrollYProgress }: FirstViewProps) {
                     </motion.h1>
 
                     <motion.div>
-                        <img src="/logo.png" alt="Kraftbase Logo" className="w-24 h-24" />
+                        <img src="/logo.png" alt="Kraftbase Logo" className="w-16 h-16 md:w-24 md:h-24" />
                     </motion.div>
                 </motion.div>
             </motion.div>
